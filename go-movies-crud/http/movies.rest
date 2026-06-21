@@ -1,0 +1,32 @@
+GET http://localhost:8080/movies HTTP/1.1
+
+###
+GET http://localhost:8080/movie/1 HTTP/1.1
+
+###
+POST http://localhost:8080/movie HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": "3",
+    "isbn": "438229",
+    "title": "Movie Three",
+    "director": {
+        "firstname": "Bob",
+        "lastname": "Smith"
+    }
+}
+
+###
+PUT http://localhost:8080/movie/2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": "2",
+    "isbn": "438229",
+    "title": "Movie Two Updated",
+    "director": {
+        "firstname": "Jane",
+        "lastname": "Doe"
+    }
+}
